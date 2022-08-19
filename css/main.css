@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    place-items: start;
+    background:  url(../img/1626941698_15-p-fon-yeda-krasnii-26.jpg) center center / cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    background: rgba(0,0,0, .6);
+}
+
+
+.container {
+    margin: 20px 70px;
+    width: 300px;
+    height: 100;
+    position: relative;
+}
+
+.header {
+    position: relative;
+    margin: 20px 30px;
+    
+}
+
+.main {
+    position: relative;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn { 
+    font-size: 30px;
+    margin-bottom: 40px;
+    padding: 10px 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: 0.4s;
+    text-align: center;
+    background: #fff;
+}
+
+.btn:hover {
+    background-color: #ffd700;
+    cursor: pointer;
+}
+
+.title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 70px;
+    color: #ffd700;
+    text-shadow: 2px 2px 2px #000;
+}
+
+.second__title {
+    font-family: 'Italianno', cursive;
+    font-size: 70px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000; 
+}
+
+.footer {
+    margin: 50px 0 20px 150px;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffd700;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+ @media (min-width: 1600px) {
+    .title {
+        font-size: 90px;
+    }
+    
+    .second__title {
+        font-size: 90px;
+    }
+    
+    .footer {
+        margin: 50px 0 10px 135px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    .btn { 
+        font-size: 40px;
+        margin-bottom: 50px;
+        padding: 20px 70px;
+    }
+    .wrapper .icon {
+        padding: 15px;
+        margin: 10px;
+        width: 70px;
+        height: 70px;
+        font-size: 25px;
+    }
+    
+} 
+
+
+  @media (max-width: 820px) {
+    
+    .footer {
+        margin: 50px 0 10px 200px;
+    }
+
+    .main {
+        margin-left: 100px;
+    }
+
+    .btn { 
+        font-size: 20px;
+        margin-bottom: 20px;
+        padding: 20px 40px;
+    }
+    .wrapper .icon {
+        padding: 10px;
+        margin: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    .footer {
+        margin-left: 50px;
+    }
+    
+}   
+
+@media (max-width: 414px) {
+    .title {
+        font-size: 60px;
+    }
+    
+    .second__title {
+        font-size: 60px;
+    }
+    
+    .footer {
+        margin: 50px 0 10px 40px;
+    }
+
+    .main {
+        margin-left: 90px;
+    }
+
+    .btn { 
+        font-size: 30px;
+        margin-bottom: 25px;
+        padding: 20px 40px;
+    }
+    .wrapper .icon {
+        padding: 15px;
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+}
